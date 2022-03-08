@@ -88,6 +88,12 @@ For a long period of time, research studies on segmentation have typically formu
 | MaskFormer + MLSeg + GT| ADE20K | R50 | 640x640 | 720000 | 44.3 | 39.7 | 53.5 | 54.5 | 49.5 | 64.6 | 79.6 | 78.6 | 81.7 | [config](configs/ade20k-150-panoptic/maskformer_panoptic_R50_bs16_720k-gt.yaml) | -
 
 
+## Image Semantic & Image Panoptic & Video Semantic & Video Instance Segmentation based on Mask2Former +  MLSeg
+
+
+## Image Semantic based on SeMask +  MLSeg
+
+
 ## Citation
 
 If you find this project useful in your research, please consider cite:

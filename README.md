@@ -118,12 +118,6 @@ For a long period of time, research studies on segmentation have typically formu
 | Mask2Former | YoutubeVIS2019 | Swin-L | 512x512 | 6000 | 60.4 | - | -
 | Mask2Former + MLSeg | YoutubeVIS2019 | Swin-L | 512x512 | 6000 | 61.1 | - | -
 
-## Image Semantic based on SeMask +  MLSeg
-# Semantic Segmentation
-| Method | Dataset | Backbone | Crop Size | Lr schd | mIoU | mIoU(ms) | config | download |
-|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| SeMask + Mask2Former MSFAPN | ADE20K | Swin-L | 512x512 | 160000 | 56.54 | 58.22 | - | -
-| Mask2Former + MLSeg | YoutubeVIS2019 | Swin-L | 512x512 | 160000 | 56.82 | 58.48 | - | -
 
 ## Citation
 

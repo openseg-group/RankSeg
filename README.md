@@ -7,7 +7,7 @@ For a long period of time, research studies on segmentation have typically formu
 
 - The MLSeg architecture:
 
-![teaser](./figures/MLSeg.png)
+![teaser](./MLSeg.png)
 
 
 ## Image Semantic Segmentation based on DeepLabV3/Segmenter/Swin/BEiT + MLSeg

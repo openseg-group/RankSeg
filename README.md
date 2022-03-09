@@ -127,7 +127,7 @@ If you find this project useful in your research, please consider cite:
 @article{HYYH2022MLSeg,
   title={MLSeg: Image and Video Segmentation as Multi-Label Classification and Selected-Label Pixel Classification},
   author={Haodi He and Yuhui Yuan and Xiangyu Yue and Han Hu},
-  booktitle={{arXiv preprint arXiv:2203.04187}},
+  booktitle={arXiv preprint arXiv:2203.04187},
   year={2022}
 }
 ```

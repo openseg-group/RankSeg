@@ -1,4 +1,4 @@
-# MLSeg: Image and Video Segmentation as Multi-Label Classification and Selected-Label Pixel Classification
+# MLSeg: Image and Video Segmentation as Multi-Label Classification and Selected-Label Pixel Classification, ECCV 2022
 
 
 

@@ -15,7 +15,7 @@ segmentation frameworks by simply using a lightweight multi-label classification
 
 - The RankSeg architecture:
 
-![teaser](./RankSeg_framework.PNG)
+![teaser](./RankSeg_framework.png)
 
 
 ## Image Semantic Segmentation based on DeepLabV3/Segmenter/Swin/BEiT + RankSeg

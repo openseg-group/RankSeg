@@ -5,7 +5,10 @@
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=openseg-group/MLseg&left_color=blue&right_color=purple)
 
 ## News
-**2022.07.04** RankSeg has been accepted by ECCV 2022. 
+
+**2022.07.19** We rename MLSeg to RankSeg to highlight the importance of our rank-oriented design.
+
+**2022.07.04** MLSeg has been accepted by ECCV 2022. 
 
 
 ## Introduction

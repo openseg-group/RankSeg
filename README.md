@@ -2,7 +2,7 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2203.04187)
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=openseg-group/RankSeg&left_color=blue&right_color=green)
-![visitors](https://visitor-badge.glitch.me/badge?page_id=openseg-group/MLseg&left_color=blue&right_color=green)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=openseg-group/MLseg&left_color=blue&right_color=purple)
 
 ## News
 **2022.07.04** RankSeg has been accepted by ECCV 2022. 

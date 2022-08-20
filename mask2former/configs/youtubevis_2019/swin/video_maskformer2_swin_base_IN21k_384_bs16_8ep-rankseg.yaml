@@ -1,0 +1,24 @@
+_BASE_: ../video_maskformer2_R50_bs16_8ep.yaml
+MODEL:
+  BACKBONE:
+    NAME: "D2SwinTransformer"
+  SWIN:
+    EMBED_DIM: 128
+    DEPTHS: [2, 2, 18, 2]
+    NUM_HEADS: [4, 8, 16, 32]
+    WINDOW_SIZE: 12
+    APE: False
+    DROP_PATH_RATE: 0.3
+    PATCH_NORM: True
+    PRETRAIN_IMG_SIZE: 384
+  WEIGHTS: "pretrained_weights/model_final_83d103.pkl"
+  PIXEL_MEAN: [123.675, 116.280, 103.530]
+  PIXEL_STD: [58.395, 57.120, 57.375]
+  RANKSEG:
+    FLAG: True
+    LOSS_WEIGHT: 10
+    TOPK: 40
+  SEM_SEG_HEAD:
+    USE_LAYERNORM: True
+INPUT:
+  MIN_SIZE_TEST: 480

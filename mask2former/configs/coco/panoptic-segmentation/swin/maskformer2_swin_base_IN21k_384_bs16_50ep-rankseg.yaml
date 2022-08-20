@@ -1,0 +1,28 @@
+_BASE_: ../maskformer2_R50_bs16_50ep.yaml
+MODEL:
+  BACKBONE:
+    NAME: "D2SwinTransformer"
+  SWIN:
+    EMBED_DIM: 128
+    DEPTHS: [2, 2, 18, 2]
+    NUM_HEADS: [4, 8, 16, 32]
+    WINDOW_SIZE: 12
+    APE: False
+    DROP_PATH_RATE: 0.3
+    PATCH_NORM: True
+    PRETRAIN_IMG_SIZE: 384
+  RANKSEG:
+    FLAG: True
+    LOSS_WEIGHT: 100
+    TOPK: 150
+  SEM_SEG_HEAD:
+    USE_LAYERNORM: True
+  WEIGHTS: "pretrained_weights/swin_base_patch4_window12_384_22k.pkl"
+  PIXEL_MEAN: [123.675, 116.280, 103.530]
+  PIXEL_STD: [58.395, 57.120, 57.375]
+  
+SOLVER:
+  MLHEAD_MULTIPLIER: 0.1
+TEST:
+  EVAL_PERIOD: 10000
+OUTPUT_DIR: "output/maskformer2_pan_coco_Swin_base_bs16_160k-100-lr0.1-133-qry_feat-norm"

@@ -1,4 +1,4 @@
-# H-Deformable-DETR
+# Mask2Former + RankSeg
 
 This is the official implementation of the paper "[RankSeg: Adaptive Pixel Classification with
 Image Category Ranking for Segmentation

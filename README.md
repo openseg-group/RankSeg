@@ -4,6 +4,13 @@
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=openseg-group/RankSeg&left_color=blue&right_color=green)
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=openseg-group/MLseg&left_color=blue&right_color=purple)
 
+
+
+
+https://user-images.githubusercontent.com/4639578/193441614-3463b101-458a-4be8-ad7a-85fd2aac8cf4.mp4
+
+
+
 ## News
 
 **2022.08.20** We release the code of [Mask2Former + RankSeg](mask2former/README.md).

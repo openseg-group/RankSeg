@@ -15,6 +15,8 @@ https://user-images.githubusercontent.com/4639578/193441675-eecf93b0-a869-497b-8
 
 ## News
 
+**2022.10.08** ⛽⛽⛽ [MSRA-VC-Group] is hiring research interns to push the frontier cutting-edge technology of object detection and segmentation.⛽⛽⛽ Contact: [yuhui.yuan@microsoft.com](yuhui.yuan@microsoft.com)
+
 **2022.08.20** We release the code of [Mask2Former + RankSeg](mask2former/README.md).
 
 **2022.07.19** We rename MLSeg to RankSeg to highlight the importance of our rank-oriented design.

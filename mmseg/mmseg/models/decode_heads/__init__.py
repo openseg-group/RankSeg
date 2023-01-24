@@ -25,22 +25,20 @@ from .sep_fcn_head import DepthwiseSeparableFCNHead
 from .setr_mla_head import SETRMLAHead
 from .setr_up_head import SETRUPHead
 from .uper_head import UPerHead
-from .uper_mlseg_head import UPerMLSegHead
 from .mask_transformer_head import MaskTransformerHead
 from .mask_transformer_essnet_head import MaskTransformerNNCEESSNetHead
-from .mask_transformer_mlseg_head import MaskTransformerMLSegHead
-from .mask_transformer_mlseg_decoder_head import MaskTransformerMLSegDecoderHead
-from .mask_transformer_mlseg_gt_head import MaskTransformerMLSegGTHead
-from .mlseg_decoder_head import MLSegDecoderHead
-from .mlseg_encoder_head import MLSegEncoderHead
+from .mask_transformer_rankseg_head import MaskTransformerRankSegHead
+from .mask_transformer_rankseg_decoder_head import MaskTransformerRankSegDecoderHead
+from .mask_transformer_rankseg_gt_head import MaskTransformerRankSegGTHead
+from .rankseg_decoder_head import RankSegDecoderHead
+from .rankseg_encoder_head import RankSegEncoderHead
 
 __all__ = [
     'FCNHead', 'PSPHead', 'ASPPHead', 'PSAHead', 'NLHead', 'GCHead', 'CCHead',
     'UPerHead', 'DepthwiseSeparableASPPHead', 'ANNHead', 'DAHead', 'OCRHead',
     'EncHead', 'DepthwiseSeparableFCNHead', 'FPNHead', 'EMAHead', 'DNLHead',
-    'PointHead', 'APCHead', 'DMHead', 'LRASPPHead', 'SETRUPHead', 'MLSegEncoderHead',
+    'PointHead', 'APCHead', 'DMHead', 'LRASPPHead', 'SETRUPHead', 'RankSegEncoderHead',
     'SETRMLAHead', 'DPTHead', 'SETRMLAHead', 'SegformerHead', 'ISAHead',
-    'MaskTransformerHead', 'MaskTransformerMLSegGTHead', 'MaskTransformerNNCEESSNetHead', 
-    'MaskTransformerMLSegHead', 'MLSegDecoderHead',
-    'UPerMLSegHead', 'MaskTransformerMLSegDecoderHead'
+    'MaskTransformerHead', 'MaskTransformerRankSegGTHead', 'MaskTransformerNNCEESSNetHead', 
+    'MaskTransformerRankSegHead', 'RankSegDecoderHead', 'MaskTransformerRankSegDecoderHead'
 ]

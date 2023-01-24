@@ -116,6 +116,7 @@ work_dirs/
 pretrain/
 tempo/
 mmseg/.mim
+local.sh
 
 # Pytorch
 *.pth

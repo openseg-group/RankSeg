@@ -53,7 +53,7 @@ class ASPPModule(nn.ModuleList):
 
 
 @HEADS.register_module()
-class ASPPMLSegHead(BaseDecodeHead):
+class ASPPRankSegHead(BaseDecodeHead):
     """Rethinking Atrous Convolution for Semantic Image Segmentation.
 
     This head is the implementation of `DeepLabV3
@@ -64,16 +64,16 @@ class ASPPMLSegHead(BaseDecodeHead):
             Default: (1, 6, 12, 18).
     """
 
-    def __init__(self, mlseg, dilations=(1, 6, 12, 18), **kwargs):
-        super(ASPPMLSegHead, self).__init__(**kwargs)
+    def __init__(self, rankseg, dilations=(1, 6, 12, 18), **kwargs):
+        super(ASPPRankSegHead, self).__init__(**kwargs)
 
-        # MLSeg
-        self.img_cls_head = build_head(mlseg['head'])
-        self.img_cls_loss = build_loss(mlseg['loss'])
-        self.topk_cls = mlseg['topk_cls']
-        self.img_loss_weight = mlseg['img_loss_weight']
+        # RankSeg
+        self.img_cls_head = build_head(rankseg['head'])
+        self.img_cls_loss = build_loss(rankseg['loss'])
+        self.topk_cls = rankseg['topk_cls']
+        self.img_loss_weight = rankseg['img_loss_weight']
 
-        self.cls_emb = nn.Parameter(torch.randn(1, self.num_classes, mlseg['head']['hidden_dim']))
+        self.cls_emb = nn.Parameter(torch.randn(1, self.num_classes, rankseg['head']['hidden_dim']))
         self.cls_bias_emb = nn.Parameter(torch.randn(1, self.num_classes))
 
         from torch.nn.init import trunc_normal_

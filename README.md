@@ -4,11 +4,22 @@
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=openseg-group/RankSeg&left_color=blue&right_color=green)
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=openseg-group/MLseg&left_color=blue&right_color=purple)
 
+
+
+
+
+https://user-images.githubusercontent.com/4639578/193441675-eecf93b0-a869-497b-81c4-ab0b3d210104.mp4
+
+
+
+
 ## News
 
 **2023.02.11** We release the code and checkpoints of [Segmenter + RankSeg](mask2former/README.md).
 
-**2022.08.20** We release the code and checkpoints of [Mask2Former + RankSeg](mmseg/configs/segmenter/README.md).
+**2022.10.08** ⛽⛽⛽ [MSRA-VC-Group] is hiring research interns to push the frontier cutting-edge technology of object detection and segmentation.⛽⛽⛽ Contact: [yuhui.yuan@microsoft.com](yuhui.yuan@microsoft.com)
+
+**2022.08.20** We release the code and checkpoints of [Mask2Former + RankSeg](mask2former/README.md).
 
 **2022.07.19** We rename MLSeg to RankSeg to highlight the importance of our rank-oriented design.
 
@@ -120,9 +131,3 @@ If you find this project useful in your research, please consider cite:
 }
 ```
 
-
-```
-git diff-index HEAD
-git subtree add -P pose <url to sub-repo> <sub-repo branch>
-```
->>>>>>> fa938790cb87b5d6115d7d0a45fbe1f787506b1d

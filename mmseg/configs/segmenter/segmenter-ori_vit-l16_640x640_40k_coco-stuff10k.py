@@ -1,7 +1,7 @@
 _base_ = [
     # "./training_scheme.py",
-    "../_base_/models/segmenter_vit-b16.py",
-    "../_base_/datasets/coco-stuff10k.py",
+    "../_base_/models/segmenter_vit-l16.py",
+    "../_base_/datasets/coco-stuff10k_640.py",
     "../_base_/default_runtime.py",
     "../_base_/schedules/schedule_40k.py",
 ]
@@ -15,20 +15,8 @@ model = dict(
         type="UseIndexSingleOutNeck",
         index=-1,
     ),
-    decode_head=dict(
-        type="MaskTransformerRankSegDecoderHead",
-        n_cls=171,
-        topk_cls=50,
-        downsample=16,
-        img_loss_weight=10,
-        img_cls_head=dict(
-            type="RankSegGlobalPoolingHead",
-            d_encoder=768,
-            n_cls=171,
-        ),
-        loss_img=dict(type="AsymmetricLoss", gamma_neg=0, gamma_pos=0),       
-    ),
-    test_cfg=dict(mode="slide", crop_size=(512, 512), stride=(512, 512)),
+    decode_head=dict(n_cls=171),
+    test_cfg=dict(mode="slide", crop_size=(640, 640), stride=(640, 640)),
 )
 
 optimizer = dict(

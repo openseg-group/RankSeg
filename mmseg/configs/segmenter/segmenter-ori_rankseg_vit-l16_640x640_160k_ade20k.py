@@ -1,9 +1,9 @@
 _base_ = [
     # "./training_scheme.py",
-    "../_base_/models/segmenter_vit-b16.py",
-    "../_base_/datasets/coco-stuff10k.py",
+    "../_base_/models/segmenter_vit-l16.py",
+    "../_base_/datasets/ade20k_640_meanstd0.5.py",
     "../_base_/default_runtime.py",
-    "../_base_/schedules/schedule_40k.py",
+    "../_base_/schedules/schedule_160k.py",
 ]
 
 model = dict(
@@ -16,32 +16,34 @@ model = dict(
         index=-1,
     ),
     decode_head=dict(
-        type="MaskTransformerRankSegDecoderHead",
-        n_cls=171,
+        type="MaskTransformerRankSegHead",
+        n_cls=150,
+        d_encoder=1024,
         topk_cls=50,
-        downsample=16,
+        downsample=8,
         img_loss_weight=10,
-        img_cls_head=dict(
-            type="RankSegGlobalPoolingHead",
-            d_encoder=768,
-            n_cls=171,
-        ),
-        loss_img=dict(type="AsymmetricLoss", gamma_neg=0, gamma_pos=0),       
+        loss_img=dict(type="AsymmetricLoss", gamma_neg=2, gamma_pos=0),
+        n_layers=3,
+        n_heads=16,
+        d_model=1024,
+        d_ff=4 * 1024,
     ),
-    test_cfg=dict(mode="slide", crop_size=(512, 512), stride=(512, 512)),
+    test_cfg=dict(mode="slide", crop_size=(640, 640), stride=(640, 640)),
 )
 
 optimizer = dict(
     _delete_=True,
     type="SGD",
     lr=0.001,
-    weight_decay=0.0,
+    weight_decay=0.000001,
     momentum=0.9,
     paramwise_cfg=dict(
         custom_keys={
             "pos_embed": dict(decay_mult=0.0),
             "cls_token": dict(decay_mult=0.0),
             "norm": dict(decay_mult=0.0),
+            "decode_head.blocks.0.": dict(decay_mult=100),
+            "decode_head.ml_fc": dict(decay_mult=100),
         }
     ),
 )
@@ -54,5 +56,6 @@ lr_config = dict(
     min_lr=1e-5,
     by_epoch=False,
 )
+
 # By default, models are trained on 8 GPUs with 1 images per GPU
 data = dict(samples_per_gpu=1)

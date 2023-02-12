@@ -6,7 +6,9 @@
 
 ## News
 
-**2022.08.20** We release the code of [Mask2Former + RankSeg](mask2former/README.md).
+**2023.02.11** We release the code and checkpoints of [Segmenter + RankSeg](mask2former/README.md).
+
+**2022.08.20** We release the code and checkpoints of [Mask2Former + RankSeg](mmseg/configs/segmenter/README.md).
 
 **2022.07.19** We rename MLSeg to RankSeg to highlight the importance of our rank-oriented design.
 
@@ -22,9 +24,11 @@ segmentation frameworks by simply using a lightweight multi-label classification
 
 ![teaser](./RankSeg_framework.png)
 
+
 ## Image Semantic & Image Panoptic & Video Semantic & Video Instance Segmentation based on Mask2Former +  RankSeg
-### Semantic Segmentation
+
 See the [MODEL_ZOO](mask2former/MODEL_ZOO.md) for Mask2Former.
+
 
 ## Image Semantic Segmentation based on DeepLabV3/Segmenter/Swin/BEiT + RankSeg
 
@@ -43,27 +47,28 @@ See the [MODEL_ZOO](mask2former/MODEL_ZOO.md) for Mask2Former.
 ### RankSeg + Segmenter
 
 * Multi-Scale test is not conducted on ADE20KFull and COCO+LVIS datasets because of memory limits.
+Download checkpoints of Segmenter in the [MODEL_ZOO](mmseg/configs/segmenter/README.md).
 
-| Method | Dataset | Backbone | Crop Size | Lr schd |  mIoU | mIoU(ms+flip) | config | download |
-|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Segmenter | COCO-Stuff | ViT-B | 512x512 | 40000 | 41.9 | 43.8 |- | -
-| Segmenter + RankSeg | COCO-Stuff | ViT-B | 512x512 | 40000 | 44.9 | 46.2 | - | -
-| Segmenter | COCO-Stuff | ViT-B | 512x512 | 80000 | 43.4 | 45.2 | - | -
-| Segmenter + RankSeg | COCO-Stuff | ViT-B | 512x512 | 80000 | 45.7 | 46.7 | - | -
-| Segmenter | COCO-Stuff | ViT-L | 640x640 | 40000 | 45.5 | 47.1 | - | -
-| Segmenter + RankSeg | COCO-Stuff | ViT-B | 640x640 | 40000 | 46.7 | 47.9 | - | -
-| Segmenter | Pascal-Context60 | ViT-B | 480x480 | 80000 | 53.8 | 54.6 | - | -
-| Segmenter + RankSeg | Pascal-Context60 | ViT-B | 480x480 | 80000 | 54.7 | 55.4 | - | - 
-| Segmenter | ADE20K | ViT-B | 512x512 | 160000 | 48.8 | 50.7 | - | -
-| Segmenter + RankSeg | ADE20K | ViT-B | 512x512 | 160000 | 49.7 | 51.4 | - | -
-| Segmenter | ADE20K | ViT-L | 640x640 | 160000 | 52.0 | 53.6 | - | -
-| Segmenter + RankSeg | ADE20K | ViT-L | 640x640 | 160000 | 52.6 | 54.4 | - | -
-| Segmenter | ADE20KFull | ViT-B | 512x512 | 160000 | 17.8 | - | - | -
-| Segmenter + RankSeg | ADE20KFull | ViT-B | 512x512 | 160000 | 18.8 | - | - | -
-| Segmenter | COCO+LVIS | ViT-B | 512x512 | 320000 | 19.4 | - | - | -
-| Segmenter + RankSeg | COCO+LVIS | ViT-B | 512x512 | 320000 | 21.3 | - | - | -
-| Segmenter | COCO+LVIS | ViT-B | 640x640 | 320000 | 23.7 | - | - | -
-| Segmenter + RankSeg | COCO+LVIS | ViT-B | 640x640 | 320000 | 24.6 | - | - | -
+| Method | Dataset | Backbone | Crop Size | Lr schd |  mIoU | mIoU(ms+flip) | 
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+| Segmenter | COCO-Stuff | ViT-B | 512x512 | 40000 | 41.9 | 43.8 |
+| Segmenter + RankSeg | COCO-Stuff | ViT-B | 512x512 | 40000 | 44.9 | 46.2 | 
+| Segmenter | COCO-Stuff | ViT-B | 512x512 | 80000 | 43.4 | 45.2 | 
+| Segmenter + RankSeg | COCO-Stuff | ViT-B | 512x512 | 80000 | 45.7 | 46.7 | 
+| Segmenter | COCO-Stuff | ViT-L | 640x640 | 40000 | 45.5 | 47.1 | 
+| Segmenter + RankSeg | COCO-Stuff | ViT-B | 640x640 | 40000 | 46.7 | 47.9 | 
+| Segmenter | Pascal-Context60 | ViT-B | 480x480 | 80000 | 53.8 | 54.6 | 
+| Segmenter + RankSeg | Pascal-Context60 | ViT-B | 480x480 | 80000 | 54.7 | 55.4 | 
+| Segmenter | ADE20K | ViT-B | 512x512 | 160000 | 48.8 | 50.7 | 
+| Segmenter + RankSeg | ADE20K | ViT-B | 512x512 | 160000 | 49.7 | 51.4 | 
+| Segmenter | ADE20K | ViT-L | 640x640 | 160000 | 52.0 | 53.6 | 
+| Segmenter + RankSeg | ADE20K | ViT-L | 640x640 | 160000 | 52.6 | 54.4 | 
+| Segmenter | ADE20KFull | ViT-B | 512x512 | 160000 | 17.8 | - | 
+| Segmenter + RankSeg | ADE20KFull | ViT-B | 512x512 | 160000 | 18.8 | - | 
+| Segmenter | COCO+LVIS | ViT-B | 512x512 | 320000 | 19.4 | - | 
+| Segmenter + RankSeg | COCO+LVIS | ViT-B | 512x512 | 320000 | 21.3 | - | 
+| Segmenter | COCO+LVIS | ViT-B | 640x640 | 320000 | 23.7 | - | 
+| Segmenter + RankSeg | COCO+LVIS | ViT-B | 640x640 | 320000 | 24.6 | - | 
 
 ### RankSeg + Swin
 
